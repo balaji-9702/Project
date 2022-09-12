@@ -1,7 +1,9 @@
-start = 0
-i = 0
-k = 1
-numbers = {
+def num_to_word():
+
+ start = 0
+ i = 0
+ k = 1
+ numbers = {
     '1' : "one",
     '2' : "two",
     '3' : "three",
@@ -14,13 +16,15 @@ numbers = {
     '0' : "zero"
 }
 
-value = input ('phone num ')
-count = len(value)
-print(count)
+ value = input ('phone num ')
+ count = len(value)
+ print(count)
 
-while  count != start:
+ while  count != start:
   start = start + 1
   sep_value = value[i]
   print(value[i] + ' -> ' + numbers[sep_value] )
   i = i + 1
+
+num_to_word()  
  
