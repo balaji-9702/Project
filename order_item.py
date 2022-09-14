@@ -4,6 +4,7 @@ items = {
         "cool_Drinks" : "40"
     }
 
+iscomplete = False
 
 def list_of_items():
     
@@ -15,13 +16,21 @@ def list_of_items():
     split_items = list(selected_items.split(','))
     calac_amt(split_items)
     
-    add_items = input('Type YES if additional items needed ? ').lower()
-    if add_items == 'yes':
+
+
+    
+    add_items = input('Type add to add items / remove  to remove items from selected list  ').lower()
+    if add_items == 'add':
        added_item=additional_item(split_items)
        split_items = split_items + added_item
        print(f'Purchased Items {split_items}')
        print('----------------------------') 
        calac_amt(split_items)
+       """
+    elif add_items == 'remove':
+        remove_item=removal_item(split_items)
+        """
+
     else:
         print("Happy Shopping ! Welcome back :)")   
       
@@ -35,6 +44,18 @@ def additional_item(split_items):
     added_item = seg_item
     return added_item
 
+"""
+def removal_item(split_items):
+    print(split_items)
+    rm_itm =[]
+    rm_items = input (f'Type the item to be removed from the selected list :')
+    rm_itm = rm_items
+    print(rm_itm)
+    for rm in split_items:
+        if rm == rm_itm:
+         split_items = split_items-rm_itm
+         print(split_items)    
+"""
 
 def calac_amt(split_items):
     amt = 0
