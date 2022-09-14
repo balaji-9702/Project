@@ -13,7 +13,6 @@ def list_of_items():
     print(values)
     selected_items = input("> Enter the required items  from the list : ")
     split_items = list(selected_items.split(','))
-    print (type(split_items))
     calac_amt(split_items)
     
     add_items = input('Type YES if additional items needed ? ').lower()
