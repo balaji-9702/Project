@@ -2,12 +2,12 @@ import order_item_funs
 import items
 
 
-
 iscomplete = False
 
+
 def list_of_items():
-    
-   #
+
+
  try:  
     values = list(items.items.keys())
     print('LIST OF ITEMS')
